@@ -5,8 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard</title>
     <!-- <link rel="stylesheet" href="styles.css"> -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
     <style>
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
@@ -109,19 +107,9 @@ if (isset($_SESSION['Username'])) {
         <ul>
             <li><a href="staff_home.php">Home</a></li>
             <li><a href="staff_appointments.php">Appointments</a></li>
-            <!-- <li><a href="">Logout</a></li> -->
-            <li><div class="dropdown">
-                    <a class="btn btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        profile
-                    </a>
-
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">dummy</a></li>
-                        <li><a class="dropdown-item" href="#">edit</a></li>
-                        <li><a class="dropdown-item" href="logout.php">logout</a></li>
-                    </ul>
-                    </div>
-</li>
+            <li><a href="report.php">Report</a></li>
+            <li><a href="logout.php">Logout</a></li>
+            <li><a href="profile.php">Profile</a></li>
         </ul>
     </nav>
 

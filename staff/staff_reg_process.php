@@ -31,10 +31,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     if (mysqli_stmt_execute($stmt)) {
         mysqli_stmt_close($stmt);
-        header("Location: staff_index.php"); // Redirect to login page after successful registration
+        header("Location: index.html"); // Redirect to login page after successful registration
         exit();
     } else {
-        header("Location: staff_index.php"); // Redirect to registration page in case of failure
+        header("Location: index.html"); // Redirect to registration page in case of failure
         exit();
     }
 }
