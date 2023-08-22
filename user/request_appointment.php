@@ -7,7 +7,7 @@
     <h2>Request an Appointment</h2>
     
     <?php
-    require 'config.php';
+    require 'dashboard.php';
     
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (isset($_POST['date']) && isset($_POST['time'])) {
