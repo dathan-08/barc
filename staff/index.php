@@ -319,6 +319,11 @@ header{
             <div class="input-box">
                 <input type="submit" class="submit" value="Sign In">
             </div>
+            <div id="appointment">
+            <center><br><br>
+        <button class="btn btn-primary"><a href="\barc\home_page\index.php">Home</a></button><br><br>
+            </center>
+        </div>
             </form>
         </div>
 

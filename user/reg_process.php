@@ -46,10 +46,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 mysqli_stmt_bind_param($stmt, "ssssssss", $firstname, $lastname, $username, $password, $dob, $gender, $contact, $address);
                 mysqli_stmt_execute($stmt);
                 echo "Registration successful!";
-                header("Location: index.html?success=true");
+                header("Location: index.php?success=true");
                 exit();
             } else {
-                header("Location: index.html?error=1");
+                header("Location: index.php?error=1");
                 exit();
             }
         }

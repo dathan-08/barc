@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Staff Dashboard</title>
-    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
+        /* Your existing styles here */
+    </style>    <style>
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
@@ -103,15 +105,16 @@ if (isset($_SESSION['Username'])) {
         <h1>Welcome, <?php echo $username; ?></h1>   
      </header>
 
-    <nav>
-        <ul>
-            <li><a href="staff_home.php">Home</a></li>
-            <li><a href="staff_appointments.php">Appointments</a></li>
-            <li><a href="report.php">Report</a></li>
-            <li><a href="logout.php">Logout</a></li>
-            <li><a href="profile.php">Profile</a></li>
-        </ul>
-    </nav>
+<nav>
+    <ul>
+        <li><a href="staff_home.php"><i class="fas fa-home"></i> Home</a></li>
+        <li><a href="staff_appointments.php"><i class="fas fa-calendar"></i> Appointments</a></li>
+        <li><a href="report.php"><i class="fas fa-chart-bar"></i> Report</a></li>
+        <li><a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+        <!-- <li><a href="profile.php"><i class="fas fa-user"></i> Profile</a></li> -->
+    </ul>
+</nav>
+
 
   
     </main>

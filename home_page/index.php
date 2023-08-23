@@ -42,7 +42,7 @@
             <div class="inner-about">
                 <div class="about-content">
                     <h1>about us</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, consequuntur harum beatae inventore voluptatem numquam voluptatibus fuga, cupiditate cumque porro perferendis tempora, adipisci culpa odio molestias dolorem blanditiis quos ad!</p>
+                <p>Welcome to the Blood Test Generator, your trusted online resource for personalized blood test reports. We understand that health is your most valuable asset, and having access to accurate and comprehensive information about your blood tests is crucial for making informed healthcare decisions. Our mission is to empower individuals with the knowledge they need to take charge of their health and well-being.</p>
                 </div>
                 
             </div>
