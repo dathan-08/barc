@@ -13,6 +13,7 @@ if (!empty($_POST)) {
         if ($password === $row['password']) { // Use === for strict comparison
             $_SESSION['name'] = $row['username'];
             $_SESSION['user_id']=$row['user_id'];
+            $_SESSION['dob']=$row['date_of_birth'];
             header("location: home.php");
             exit();
         } else {

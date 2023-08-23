@@ -1,88 +1,87 @@
+<?php require "config.php";?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Stylish Navbar Example</title>
-    <!-- Include Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            padding: 60px;
-            background: url("u_home.jpg");
-            background-size: cover;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
         }
 
-        #content {
-            margin-left: 50%;
+        .navbar {
+            background-color: transparent;
+
+            margin: 30px;
         }
-        .navbar{
-           
-            margin:20px; 
-            height:75px;
-            color:black;
-            padding: 10px;
-            box-shadow: 10px 10px 10px rgba(0, 0, 0, .1),
-                    -10px -10px 10px rgba(255, 255, 255, 1),
-                    inset 10px 10px 10px  rgba(0, 0, 0, .1),
-                    inset -10px -10px 10px rgba(255, 255, 255, 1);
-        border-radius: 10px;
-        } 
-        .
-        /* Style for the navigation links */
-        .navbar-dark .navbar-nav .nav-link {
+
+        .navbar-brand {
+            font-size: 90px;
+            font-weight: bold;
             color: black;
         }
-        .navbar:hover
-        {
-            color:blue;
 
+        .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-toggler-icon {
+            background-color: black;
+        }
+
+        .navbar-nav .nav-link {
+            font-size: 18px;
+            color: black;
+            transition: red 0.2 s;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #17a2b8;
+        }
+
+        .navbar-dark .navbar-toggler {
+            border: none;
+        }
+
+        .navbar-dark .navbar-toggler:focus {
+            outline: none;
+        }
+        #navbarNav{
+            margin-left: 50%;
         }
     </style>
 </head>
 <body>
-
-<!-- Navbar -->
-<nav class="navbar navbar-expand-lg shadow-strong sticky-top" >
-    <!-- Container wrapper -->
-    <div class="container-fluid">
-        <!-- Navbar brand -->
-        <?php
-        require 'config.php';
-        if (isset($_SESSION['name'])) {
-            $username = $_SESSION['name'];
-            $getUserQuery = "SELECT first_name, last_name FROM users WHERE username = '$username'";
-            $getUserResult = mysqli_query($conn, $getUserQuery);
-            if ($userRow = mysqli_fetch_assoc($getUserResult)) {
-                $fullName = $userRow['first_name'] . " " . $userRow['last_name'];
-                echo "<h2 class='dashboard-logo text-center mb-4'>$fullName</h2>";
-            }
-        }
-        ?>
-
-        <div class="collapse navbar-collapse " id="content">
-            <ul class="navbar-nav ">
-                <li class="nav-item">
-                    <button class="nav-link" aria-current="page" href="home.php">Home</a>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" href="request_appointment.php">Appointments</a>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" href="reports.php">Report</a>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" href="diet.php">Diet</a>
-                </li>
-                <li class="nav-item">
-                    <button class="nav-link" href="logout.php">Log Out</a>
-                </li>
-            </ul>
+    <nav class="navbar navbar-expand-lg sticky-top navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="home.php">BARC</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.php">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="request_appointment.php">Appointments</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.php">Report</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="diet.php">Diet</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">Logout</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Include Bootstrap JS and jQuery -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

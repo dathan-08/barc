@@ -16,7 +16,7 @@ $reportsResult = mysqli_query($conn, $reportsQuery);
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
+            background:rgba(26, 106, 236, 0.4); 
             margin: 0;
             padding: 0;
         }
@@ -33,7 +33,7 @@ $reportsResult = mysqli_query($conn, $reportsQuery);
         .report {
             margin-bottom: 20px;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: rgba(0, 0, 0, 0.1) ;
             border-radius: 5px;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
         }
@@ -57,7 +57,7 @@ $reportsResult = mysqli_query($conn, $reportsQuery);
 </head>
 <body>
     <div class="reports-container">
-        <h1>Generated Reports</h1>
+        <h1>Barc-report</h1>
             
             <?php while ($row = $reportsResult->fetch_assoc()) {?>
                 <div class="report">
@@ -80,10 +80,12 @@ $reportsResult = mysqli_query($conn, $reportsQuery);
                         Cholesterol: <?php echo $row['cholesterol']; ?><br>
                         Diabetes: <?php echo $row['diabetes']; ?>
                     </div>
-                <?php } ?>
+                <?php } ?><
                 
             </div>
         <?php } ?>
+       
     </div>
+   
 </body>
 </html>
